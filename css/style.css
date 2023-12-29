@@ -10,7 +10,6 @@ body {
     padding: 0;
     max-width: 1920px;
     width: 100%;
-
 }
 
 *, *::before, *::after {
@@ -66,6 +65,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    cursor: pointer;
     padding: 13px 50px;
 }
 .button-nav__2
@@ -80,82 +80,60 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 25px; /* 125% */
+    cursor: pointer;
     padding: 13px 50px;
 }
 /*img*/
-.header {
-    min-height: 895px;
+.wrap-img {
+    width: 100%;
+    height: 895px;
     background-image: url(../img/BG.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-.header h1 {
+.wrap-img__text
+{
+    max-width: 440px;
+    width: 100%;
+    height: 100%;
+
+    margin-left: 275px;
+    padding-top: 175px;
+}
+.wrap-img h1 {
     font-size: 65px;
     font-weight: bold;
     font-family: 'Noto Sans Georgian', sans-serif;
-    max-width: 440px;
     color: #01996D;
-    margin-top: 0;
-    padding-top: 175px;
 }
 
-.header p {
+.wrap-img p {
     font-size: 20px;
     max-width: 420px;
-    height: 123px;
-    margin-bottom: 18px;
+
+
     color: #484848;
 
 }
-.header .button {
-    width: 227px;
-    height: 65px;
-    font-size: 20px;
+.wrap-img .button {
     border-radius: 4px;
-    padding: 20px 40px;
     background: #01996D;
-    color: white;
     border: none;
     cursor: pointer;
+    color: #FFF;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 125% */
+
+    padding: 20px 40px;
 }
 
 
-/*section footer*/
-.footer {
-    background-color: #245852;
-    padding: 95px 0;
-}
-
-.footer .logo {
-    margin-bottom: 60px;
-}
-.footer ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-
-.footer ul li a {
-    color: white;
-    font-size: 25px;
-
-    text-decoration: none;
-}
-
-.footer ul li a:hover {
-    opacity: 0.8;
-}
-
-.footer ul li {
-    margin-bottom: 60px;
-}
-
-.footer ul li:last-child {
-    margin-bottom: 0;
-}
-
+/* main*/
 /*section cards*/
 section[cards]
 {
@@ -173,40 +151,41 @@ section[cards] .title {
     line-height: 157%; /* 37.68px */
 }
 
+section[cards] .title-text
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13.6rem;
+}
 
-section[cards] h2 {
+section[cards] .title-text h2 {
     color: #01996D;
     font-family: 'Noto Sans Georgian', sans-serif;
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
     line-height: 157%; /* 78.5px */
+    word-break: break-all;
+
+
 }
 
-section[cards] .text {
+section[cards] .title-text p {
     color: #424242;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 30px */
-}
-
-section[cards] .title-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 13.6rem;
-}
-section[cards] .title-flex h2 {
-    max-width: 55.5rem;
-    width: 100%;
-}
-section[cards] .title-flex p {
     word-break: break-all;
+
     max-width: 60rem;
     width: 100%;
 }
+
+
+
 
 /**/
 .cards {
@@ -276,3 +255,39 @@ section[cards] .title-flex p {
 }
 
 
+
+/*section footer*/
+.footer {
+    background-color: #245852;
+    padding: 95px 0;
+}
+
+.footer .logo {
+    margin-bottom: 60px;
+}
+
+.footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.footer ul li a {
+    color: white;
+    font-size: 25px;
+
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    opacity: 0.8;
+}
+
+.footer ul li {
+    margin-bottom: 60px;
+}
+
+.footer ul li:last-child {
+    margin-bottom: 0;
+}
