@@ -1,23 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    font-family: 'Lato', sans-serif, 'Noto Sans Georgian', sans-serif;
 }
-*, *::before, *::after {
-    box-sizing: inherit;
-}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
-}
-.container {
-    max-width: 1370px;
+    max-width: 1920px;
     width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
+
 }
 
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+/*section header*/
+.nav
+{
+    width: 100%;
+    height: 85px;
+    background: #FFF;
+
+}
+.nav-wrap
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 17px 0;
+
+}
+
+.navigation-link
+{
+    font-size: 24px;
+}
+
+.nav__ul {
+    list-style-type: none;
+    display: flex;
+    gap: 7rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #292929;
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.button-nav__1
+{
+    border: none;
+    background-color: transparent;
+    color: #000;
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 13px 50px;
+}
+.button-nav__2
+{
+    border-radius: 4px;
+    border: 1px solid #01996D;
+    background: #01996D;
+    color: #FFF;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 125% */
+    padding: 13px 50px;
+}
+/*img*/
 .header {
     min-height: 895px;
     background-image: url(../img/BG.png);
@@ -28,7 +93,7 @@ body {
 .header h1 {
     font-size: 65px;
     font-weight: bold;
-    font-family: "Georgia", sans-serif;
+    font-family: 'Noto Sans Georgian', sans-serif;
     max-width: 440px;
     color: #01996D;
     margin-top: 0;
@@ -43,7 +108,7 @@ body {
     color: #484848;
 
 }
-.header button {
+.header .button {
     width: 227px;
     height: 65px;
     font-size: 20px;
@@ -54,6 +119,9 @@ body {
     border: none;
     cursor: pointer;
 }
+
+
+/*section footer*/
 .footer {
     background-color: #245852;
     padding: 95px 0;
@@ -88,14 +156,16 @@ body {
     margin-bottom: 0;
 }
 
-.section-cards {
-    max-width: 1413px;
+/*section cards*/
+section[cards]
+{
+    max-width: 141.3rem;
     width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
+    /*margin: 0 232px 51px 275px;*/
+    /*padding: 0 15px;*/
 }
 
-.section-cards .title {
+section[cards] .title {
     color: #424242;
     font-size: 24px;
     font-style: normal;
@@ -104,29 +174,41 @@ body {
 }
 
 
-.section-cards h2 {
+section[cards] h2 {
     color: #01996D;
-    font-family: Georgia;
+    font-family: 'Noto Sans Georgian', sans-serif;
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
-    /*line-height: 157%; !* 78.5px *!*/
+    line-height: 157%; /* 78.5px */
 }
 
-.section-cards .text {
+section[cards] .text {
     color: #424242;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 30px */
 }
 
-.title-flex {
+section[cards] .title-flex {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    gap: 13.6rem;
+}
+section[cards] .title-flex h2 {
+    max-width: 55.5rem;
+    width: 100%;
+}
+section[cards] .title-flex p {
+    word-break: break-all;
+    max-width: 60rem;
+    width: 100%;
 }
 
+/**/
 .cards {
     display: flex;
     gap: 9.5rem;
@@ -136,19 +218,17 @@ body {
     max-width: 390px;
     width: 100%;
     height: 100%;
-    /*margin: 0 auto;*/
-    /*padding: 0 15px;*/
     position: relative;
 }
 .card .card__title
 {
     color: rgba(1, 153, 109, 0.20);
     text-align: center;
-    font-family: Georgia;
+    font-family: 'Noto Sans Georgian', sans-serif;
     font-size: 150px;
     font-style: normal;
     font-weight: 400;
-    /*line-height: 150%; !* 225px *!*/
+    line-height: 150%; /* 225px */
     position: absolute;
     top: -20rem;
     left: 0;
@@ -159,7 +239,7 @@ body {
 {
     color: #000;
     text-align: center;
-    font-family: Georgia;
+    font-family: 'Noto Sans Georgian', sans-serif;
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -172,7 +252,7 @@ body {
 .card .card__text
 {
     color: #424242;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
